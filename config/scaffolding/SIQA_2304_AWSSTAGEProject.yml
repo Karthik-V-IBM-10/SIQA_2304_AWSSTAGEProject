@@ -218,6 +218,50 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+- serviceName: project.siqa_2304_awsstage.integrations:refdaf
+  packages:
+  - name: SIQA_2304_AWSSTAGEProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.53
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+- serviceName: project.siqa_2304_awsstage.referencedata:ref1
+  packages:
+  - name: SIQA_2304_AWSSTAGEProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.53
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 configurationVariables:
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
   : "10"
