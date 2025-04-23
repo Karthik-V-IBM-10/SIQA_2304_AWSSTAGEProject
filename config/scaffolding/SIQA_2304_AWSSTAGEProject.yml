@@ -30,16 +30,19 @@ packages:
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: DADA_GlobalVariable1
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: SIQAJDBCAdapterTests
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
 - name: SIQACloudStreamsTests
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: Karthik-V-IBM-10
@@ -111,7 +114,7 @@ services:
     version: 10.7.0.0.53
   - name: SIQACloudStreamsTests
     version: "1.0"
-- serviceName: project.siqa_2304_awsstage.integrations:JMS_JNDI_SSL
+- serviceName: project.siqa_2304_awsstage.integrations:JMSFlowTest
   packages:
   - name: SIQA_2304_AWSSTAGEProject
     version: "1.0"
@@ -141,6 +144,28 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
+- serviceName: project.siqa_2304_awsstage.integrations:JMS_JNDI_SSL
+  packages:
+  - name: SIQA_2304_AWSSTAGEProject
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.53
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 - serviceName: project.siqa_2304_awsstage.integrations:SIQAAdapterFlow
   packages:
   - name: SIQA_2304_AWSSTAGEProject
@@ -196,46 +221,46 @@ services:
 configurationVariables:
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
   : "10"
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
-  : ""
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
-  : siqatest
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
   : "10"
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
   : loginTimeout=60;driverType=thin;
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
-  : "0"
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
-  : tcp
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
-  : NO_TRANSACTION
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
   : "false"
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
-  : com.mysql.cj.jdbc.MysqlDataSource
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
-  : "1"
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
+  : NO_TRANSACTION
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
   : 9.46.196.248
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
-  : ""
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
   : MYSQL_DATABASE
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
+  : MySQL
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  : ""
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : siqatest
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
   : "0"
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
   : "1"
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
-  : "false"
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
-  : MySQL
-  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
-  : "3306"
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
   : mysql
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
   : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
   ? artConnection.SIQA_2304_AWSSTAGEProject.project.siqa_2304_awsstage.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
